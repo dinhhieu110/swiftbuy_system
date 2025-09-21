@@ -1,18 +1,18 @@
-import { ProductInputSchema } from '@/lib/validator'
-import { z } from 'zod'
+import { ProductInputSchema } from "@/lib/validator";
+import { z } from "zod";
 
-export type TProductInput = z.infer<typeof ProductInputSchema>
-export type TData = {
-  products: TProductInput[]
+export type IProductInput = z.infer<typeof ProductInputSchema>;
+export type IData = {
+  products: IProductInput[];
   headerMenus: {
-    name: string
-    href: string
-  }[]
+    name: string;
+    href: string;
+  }[];
   carousels: {
-    image: string
-    url: string
-    title: string
-    buttonCaption: string
-    isPublished: boolean
-  }[]
-}
+    image: string;
+    url: string;
+    title: string;
+    buttonCaption: string;
+    isPublished: boolean;
+  }[];
+};
