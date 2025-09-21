@@ -79,7 +79,7 @@ export default async function Page() {
             <ProductSlider
               title='Best Selling Products'
               products={bestSellingProducts}
-              // hideDetails
+              hideDetails
             />
           </CardContent>
         </Card>

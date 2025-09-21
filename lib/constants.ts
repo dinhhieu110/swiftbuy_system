@@ -8,3 +8,5 @@ export const APP_Description =
 
 // Products
 export const CATEGORIES = ['men', 'women', 'kids', 'accessories']
+
+export const PAGE_SIZE = Number(process.env.PAGE_SIZE || 9)
