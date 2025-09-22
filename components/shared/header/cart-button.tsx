@@ -5,14 +5,15 @@ import Link from 'next/link'
 import useIsMounted from '@/hooks/use-is-mounted'
 import { cn } from '@/lib/utils'
 import useCartStore from '@/hooks/use-cart-store'
+import useCartSidebar from '@/hooks/use-cart-sidebar'
 
 export default function CartButton() {
   const isMounted = useIsMounted()
   const {
     cart: { items },
   } = useCartStore()
-  console.log('items:', items)
-  console.log('isMounted:', isMounted)
+  const isCartSidebarOpen = useCartSidebar()
+
   const cartItemsCount = items.reduce((a, c) => a + c.quantity, 0)
   return (
     <Link href='/cart' className='px-1 header-button'>
